@@ -1,0 +1,831 @@
+//colors
+$color_chicago_approx: #5d5e5e;
+$white: #fff;
+$color_fun_blue_90_approx: rgba(33,82,164,0.9);
+$color_cape_cod_approx: #424343;
+$color_fun_blue_approx: #2152a4;
+$color_stack_approx: #8c8c8c;
+$color_iron_approx: #d7d7d7;
+$color_cararra_approx: #ececec;
+$color_boston_blue_approx: rgba(50,130,195,1);
+$color_eastern_blue_approx: rgba(27,177,167,1);
+$color_sushi_approx: #7ac143;
+$color_celeste_approx: #ccc;
+$color_st_tropaz_approx: #2453a2;
+$color_silver_chalice_approx: #aeaeae;
+$alto: #dbdbdb;
+$color_gray_nurse_approx: #e8e8e8;
+$color_bon_jour_approx: #e0e0e0;
+$color_sapphire_approx: #2554a4;
+$color_star_dust_approx: #a1a1a1;
+$color_mercury_approx: #e6e6e7;
+$color_pumice_approx: #c8c8c8;
+$concrete: #f2f2f2;
+
+//fonts
+$font_0: source-sans;
+$font_1: source-sans-bold;
+$font_2: source-sans-semi;
+
+//urls
+$url_0: url(../fonts/SourceSansPro-Regular.otf);
+$url_1: url(../fonts/SourceSansPro-Bold.otf);
+$url_2: url(../fonts/SourceSansPro-Semibold.otf);
+$url_3: url(../img/header.png);
+$url_4: url(../img/breadcrumb.png);
+
+//@extend-elements
+//original selectors
+//.col-xs-15, .col-sm-15, .col-md-15, .col-lg-15
+%extend_1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+@font-face {
+  font-family: $font_0;
+  src: $url_0;
+}
+@font-face {
+  font-family: $font_1;
+  src: $url_1;
+}
+@font-face {
+  font-family: $font_2;
+  src: $url_2;
+}
+h1 {
+  font-size: 34px;
+  &.banner-title {
+    color: $white;
+    margin-top: 55px;
+    line-height: 45px;
+    span {
+      font-family: $font_1;
+    }
+  }
+}
+h2 {
+  font-family: $font_2;
+  font-size: 24px;
+  &.course-author {
+    color: $color_cape_cod_approx;
+    border-bottom: solid 2px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    span {
+      font-size: 12px;
+      margin-left: 20px;
+      font-style: italic;
+    }
+  }
+  &.bread span {
+    font-size: 14px;
+    margin-left: 30px;
+    font-family: $font_0;
+  }
+}
+h3 {
+  font-size: 18px;
+  font-family: $font_2;
+  color: $color_chicago_approx;
+}
+h4 {
+  font-size: 16px;
+  font-family: $font_2;
+  color: $color_chicago_approx;
+  &.overview-title {
+    padding-left: 15px;
+    border-bottom: solid $color_sushi_approx;
+    padding-bottom: 15px;
+  }
+  &.title-step {
+    margin-bottom: 2px;
+    color: $color_chicago_approx;
+  }
+}
+h5 {
+  font-size: 14px;
+  color: $color_chicago_approx;
+  &.right {
+    line-height: 20px;
+  }
+}
+p {
+  font-size: 12px;
+  line-height: 13px;
+  &.footer-terms {
+    margin: 3px 0;
+  }
+  &.desc-footer {
+    width: 70%;
+  }
+  &.title-socmed {
+    font-size: 14px;
+    font-family: $font_1;
+    margin-top: 10px;
+  }
+  &.author-matkul {
+    font-size: 14px;
+  }
+  &.title-matkul {
+    font-size: 18px;
+    font-family: $font_1;
+    padding: 15px 0 10px;
+    border-bottom: 2px solid $color_fun_blue_approx;
+  }
+  &.date-matkul {
+    color: $color_fun_blue_approx;
+    line-height: 10px;
+  }
+  &.title-matkul-hover {
+    font-size: 18px;
+    font-family: $font_0;
+    color: $white;
+    position: absolute;
+    bottom: 30px;
+  }
+  &.title-how-to-use {
+    font-family: $font_2;
+    font-size: 24px;
+    color: $white;
+    &.title-icon-how {
+      text-align: left;
+      padding-left: 75px;
+      line-height: 25px;
+      padding-right: 10px;
+    }
+  }
+  &.about-course {
+    font-size: 16px;
+    line-height: 30px;
+    width: 80%;
+    color: $color_chicago_approx;
+  }
+  &.course-staff {
+    font-family: $font_2;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  &.table-right-socmed {
+    font-size: 18px;
+    letter-spacing: 12px;
+    text-align: center;
+    color: $color_fun_blue_approx;
+    padding: 10px;
+    border-bottom: 1px solid $color_gray_nurse_approx;
+    margin: 0 30px;
+  }
+  &.table-right-course {
+    color: $color_chicago_approx;
+    font-size: 14px;
+    border-bottom: 1px solid $color_gray_nurse_approx;
+    margin: 0 30px;
+    padding: 15px 0;
+    span {
+      float: right;
+      font-family: $font_2;
+    }
+  }
+  &.desc-course {
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+.image-bg-fluid-height {
+  text-align: center;
+  background-size: cover;
+}
+.image-bg-fixed-height {
+  text-align: center;
+  background-size: cover;
+}
+section {
+  padding: 40px 0;
+  &#banner {
+    background-image: $url_3;
+    background-size: cover;
+    padding: 55px 0;
+  }
+  &#how-to-use {
+    background-image: $url_3;
+    background-size: cover;
+    border-top: 5px solid $color_sushi_approx;
+  }
+  &.course-list {
+    padding-bottom: 100px;
+  }
+  &#overview {
+    padding-bottom: 100px;
+  }
+  &#signup {
+    padding-bottom: 100px;
+  }
+  &#signin {
+    padding-bottom: 200px;
+  }
+  &#contactus {
+    padding-bottom: 200px;
+  }
+  &#courseware {
+    padding-bottom: 100px;
+  }
+  &#matkul {
+    background-color: $color_cararra_approx;
+  }
+  &.panel.matkul {
+    padding: 0;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 15px;
+    border: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+  }
+}
+div {
+  &#breadcrumb {
+    background-image: $url_4;
+    background-size: cover;
+    padding: 25px;
+  }
+  &.menu-footer {
+    min-height: 235px;
+    border-left: 1px solid $color_iron_approx;
+    padding-left: 20px;
+  }
+  &.title-img-video {
+    font-size: 18px;
+    text-align: center;
+    background-color: $color_fun_blue_approx;
+    color: $white;
+    //Instead of the line below you could use @include border-bottom-left-radius($radius)
+    border-bottom-left-radius: 10px;
+    //Instead of the line below you could use @include border-bottom-right-radius($radius)
+    border-bottom-right-radius: 10px;
+  }
+  &.view-all-partner {
+    text-align: right;
+    font-size: 14px;
+  }
+  &#footer {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-top: 3px solid $color_celeste_approx;
+  }
+  &.course-author {
+    padding: 30px;
+    background-color: $color_cararra_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 10px;
+  }
+  &.course-staff {
+    margin: 10px;
+  }
+  &.detail-course-staff {
+    display: inline-table;
+    margin-left: 15px;
+    margin-top: 5px;
+    vertical-align: top;
+  }
+  &.table-right-course {
+    border: 1px solid;
+    border-top: none;
+    margin-top: -10px;
+    color: $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 10px;
+    //Instead of the line below you could use @include border-top-right-radius($radius)
+    border-top-right-radius: 0;
+    //Instead of the line below you could use @include border-top-left-radius($radius)
+    border-top-left-radius: 0;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+  &.step-sign {
+    border-left: 1px solid $color_bon_jour_approx;
+    padding: 20px;
+    margin-top: 80px;
+    padding-bottom: 220px;
+  }
+  &.step-grid {
+    margin-bottom: 40px;
+  }
+  &.user-login {
+    float: right;
+    margin-top: 25px;
+  }
+  &#faq {
+    width: 55%;
+    margin: auto;
+  }
+  &.panel {
+    &.blue-faq {
+      border: 2px solid $color_sapphire_approx;
+    }
+    &.green-faq {
+      border: 2px solid $color_sushi_approx;
+    }
+  }
+  &.list-courseware {
+    width: 70%;
+  }
+  &.course-content {
+    margin-top: 40px;
+  }
+  &.content-course {
+    border-left: 1px solid $color_pumice_approx;
+    padding-bottom: 40px;
+  }
+  &.course-video {
+    padding: 10px;
+    background-color: $concrete;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  &.radio-quest {
+    margin-left: 20px;
+    border-left: 1px solid $color_celeste_approx;
+    padding: 5px 20px;
+  }
+  &.col-md-12.contactus {
+    margin-top: 25px;
+  }
+}
+.breadcrumb-title {
+  color: $white;
+}
+.img-center {
+  margin: 0 auto;
+}
+.section-heading {
+  margin: 30px 0;
+  font-size: 4em;
+}
+.section-lead {
+  margin: 30px 0;
+}
+.section-paragraph {
+  margin: 30px 0;
+}
+.navbar {
+  margin-bottom: 0;
+}
+ul {
+  list-style-type: none;
+  &.menu-footer {
+    padding: 0;
+    line-height: 40px;
+    margin-bottom: 0;
+    min-height: 235px;
+  }
+  &.about-course {
+    list-style: inherit;
+    line-height: 25px;
+  }
+  &.left-course {
+    padding-left: 0;
+    font-size: 16px;
+    font-family: $font_2;
+  }
+  &.nav.navbar-nav {
+    margin-left: 100px;
+    margin-top: 15px;
+  }
+}
+li {
+  &.menu {
+    padding-right: 50px;
+  }
+  &.about-course {
+    font-size: 14px;
+    color: $color_chicago_approx;
+  }
+  &.left-course {
+    padding-bottom: 10px;
+  }
+  &.icon-video {
+    border-right: 1px solid;
+  }
+}
+.navbar-inverse {
+  .navbar-nav>li>a {
+    color: $color_cape_cod_approx;
+    font-size: 14px;
+    &:hover {
+      color: $color_cape_cod_approx;
+      font-size: 14px;
+    }
+    &:focus {
+      color: $color_cape_cod_approx;
+      font-size: 14px;
+    }
+    &:active {
+      color: $color_cape_cod_approx;
+      font-size: 14px;
+    }
+  }
+  .navbar-toggle {
+    background-color: $color_fun_blue_approx;
+    border: none;
+    background-color: $color_fun_blue_approx;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 25px;
+    &:hover {
+      background-color: $color_fun_blue_approx;
+      border: none;
+    }
+    &:active {
+      background-color: $color_fun_blue_approx;
+      border: none;
+    }
+    &:focus {
+      background-color: $color_fun_blue_approx;
+      border: none;
+    }
+  }
+}
+img {
+  &.logo {
+    width: 192px;
+    &.footer-logo {
+      margin-bottom: 10px;
+    }
+  }
+  &.socmed-footer {
+    width: 30px;
+    margin-right: 5px;
+  }
+  &.logo-partner {
+    width: 125px;
+  }
+  &.line {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  &.line2 {
+    position: absolute;
+    width: 100%;
+    margin-top: -25px;
+  }
+  &.img-how-to-use {
+    position: absolute;
+    left: 25px;
+    margin-top: 10px;
+  }
+  &.ind {
+    width: 200px;
+  }
+  &.course-staff {
+    border: 1px solid $alto;
+  }
+  &.icon-search {
+    width: 20px;
+    margin-top: 3px;
+  }
+  &.video-banner {
+    //Instead of the line below you could use @include border-top-left-radius($radius)
+    border-top-left-radius: 10px;
+    //Instead of the line below you could use @include border-top-right-radius($radius)
+    border-top-right-radius: 10px;
+  }
+  &.full.img-matkul {
+    //Instead of the line below you could use @include border-top-left-radius($radius)
+    border-top-left-radius: 15px;
+    //Instead of the line below you could use @include border-top-right-radius($radius)
+    border-top-right-radius: 15px;
+    min-width: 261px;
+    min-height: 163px;
+  }
+}
+.sign {
+  float: right;
+  margin-top: 30px;
+  font-size: 14px;
+}
+a {
+  color: $color_fun_blue_approx;
+  &.regis {
+    margin-right: 50px;
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &.menu-footer {
+    color: $color_cape_cod_approx;
+    line-height: 25px;
+    font-size: 14px;
+    &:hover {
+      color: $color_stack_approx;
+    }
+  }
+  &.socmed {
+    padding: 3px 5px;
+    font-size: 20px;
+    background-color: $color_st_tropaz_approx;
+    color: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    margin-right: 1px;
+  }
+  &.faq-more {
+    float: right;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  &.menu-courseware {
+    font-size: 16px;
+    font-family: $font_2;
+  }
+  &.left-course {
+    color: $color_chicago_approx;
+    &:hover {
+      color: $color_star_dust_approx;
+    }
+    &:focus {
+      color: $color_star_dust_approx;
+    }
+    &.active {
+      color: $color_star_dust_approx;
+    }
+  }
+  &.view-studio {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  &.list-menu:hover {
+    color: $color_stack_approx !important;
+  }
+}
+.full {
+  width: 100%;
+}
+.col-xs-15 {
+  @extend %extend_1;
+  width: 20%;
+  float: left;
+}
+.col-sm-15 {
+  @extend %extend_1;
+}
+.col-md-15 {
+  @extend %extend_1;
+  &.col-sm-3 {
+    text-align: center;
+  }
+}
+.col-lg-15 {
+  @extend %extend_1;
+}
+.title-matkuls {
+  text-align: center;
+  padding: 5px;
+  font-size: 24px;
+  background-color: $color_cararra_approx;
+  max-width: 280px;
+  margin: auto;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 15px;
+  //Instead of the line below you could use @include border-bottom-left-radius($radius)
+  border-bottom-left-radius: 0;
+  //Instead of the line below you could use @include border-bottom-right-radius($radius)
+  border-bottom-right-radius: 0;
+  font-family: $font_2;
+}
+.matkul-desc {
+  padding: 15px;
+  line-height: 10px;
+  min-height: 180px;
+  //Instead of the line below you could use @include border-bottom-left-radius($radius)
+  border-bottom-left-radius: 15px;
+  //Instead of the line below you could use @include border-bottom-right-radius($radius)
+  border-bottom-right-radius: 15px;
+}
+.gradient {
+  background: $color_boston_blue_approx;
+  background: linear-gradient(to right, $color_boston_blue_approx 0, $color_eastern_blue_approx 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_boston_blue_approx', endcolorstr='$color_eastern_blue_approx', gradienttype=1 );
+}
+.white {
+  color: $white;
+}
+.how-to-use {
+  padding: 10px 0;
+  border-right: 1px solid $white;
+  height: 70px;
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.no-border {
+  border: none;
+}
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none !important;
+}
+.col-md-4 {
+  &.btn-courseware {
+    padding-right: 0;
+  }
+  &.right-signup {
+    margin-top: 20px;
+  }
+}
+.no-right {
+  padding-right: 0;
+}
+label {
+  font-size: 14px;
+  color: $color_chicago_approx;
+  &.check-terms {
+    margin-right: 30px;
+    span {
+      color: $color_chicago_approx;
+      font-family: $font_0;
+    }
+  }
+  &.password {
+    width: 100%;
+    span {
+      float: right;
+    }
+  }
+}
+.btn-sign {
+  margin-top: 20px;
+}
+.grey {
+  color: $color_chicago_approx;
+  &:hover {
+    color: $color_chicago_approx;
+  }
+  &:focus {
+    color: $color_chicago_approx;
+  }
+  &:active {
+    color: $color_chicago_approx;
+  }
+}
+.blue {
+  color: $color_fun_blue_approx;
+}
+.step-signin {
+  border-left: 1px solid $color_bon_jour_approx;
+  padding: 20px;
+  padding-left: 40px;
+}
+span {
+  &.user-login {
+    background-color: $color_fun_blue_approx;
+    color: $white;
+    padding: 15px;
+    margin-left: -12px;
+    margin-right: 25px;
+  }
+  &.search {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+.inner-addon {
+  position: relative;
+  .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+}
+.search-faq {
+  float: right;
+  min-width: 250px;
+  margin-top: -40px;
+}
+header {
+  &.blue-faq {
+    background-color: $color_sapphire_approx;
+    color: $white;
+    font-size: 16px;
+  }
+  &.green-faq {
+    background-color: $color_sushi_approx;
+    color: $white;
+    font-size: 16px;
+  }
+}
+.bordered {
+  border: 1px solid $color_chicago_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+}
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.inner-course {
+  padding-top: 30px;
+}
+nav.navbar.navbar-inverse.navbar-static-top {
+  background-color: $white;
+  border-bottom: 5px solid;
+  border-color: $color_fun_blue_90_approx;
+  padding-bottom: 15px;
+}
+.container.header {
+  font-family: $font_2;
+  color: $color_cape_cod_approx;
+}
+button.btn {
+  &.registered {
+    background-color: $white;
+    border-color: $color_silver_chalice_approx;
+    padding: 10px 0;
+    font-family: $font_2;
+  }
+  &.view-courseware {
+    background-color: $color_fun_blue_approx;
+    border: none;
+    padding: 10px 0;
+    color: $white;
+    font-family: $font_2;
+  }
+  &.btn-nav {
+    background: none;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  &.btn-primary.login {
+    padding: 2px 30px;
+    background-color: $color_fun_blue_approx;
+    border: none;
+  }
+  &.login-already.pull-right {
+    background: none;
+    border: 1px solid $color_celeste_approx;
+    color: $color_fun_blue_approx;
+  }
+}
+.col-md-8.btn-registered {
+  padding-left: 0;
+}
+.col-md-3.right-signup {
+  margin-top: 10px;
+}
+.input-group.user {
+  max-width: 230px;
+}
+input.search {
+  padding-left: 18px;
+  background-repeat: no-repeat;
+}
+.nav-pills>li.active>a {
+  background-color: $color_mercury_approx;
+  color: $color_sapphire_approx;
+  &:hover {
+    background-color: $color_mercury_approx;
+    color: $color_sapphire_approx;
+  }
+  &:focus {
+    background-color: $color_mercury_approx;
+    color: $color_sapphire_approx;
+  }
+  &:active {
+    background-color: $color_mercury_approx;
+    color: $color_sapphire_approx;
+  }
+}
